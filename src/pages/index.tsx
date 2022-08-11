@@ -1,7 +1,9 @@
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query";
 import type { GetServerSideProps, NextPage } from "next";
 import Image from "next/image";
+import { useState } from "react";
 import { getRandomPokemon } from "../api";
+import { translateName } from "../util/func";
 
 const Home: NextPage = () => {
   const { data, isLoading, error, refetch } = useQuery(
@@ -18,11 +20,11 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <h1>{data.name}</h1>
+      <h1>{translateName(data.id, "ko")}</h1>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
-        width={300}
-        height={300}
+        width={275}
+        height={275}
       />
       <button onClick={() => refetch()}>dsa</button>
     </div>
