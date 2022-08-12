@@ -1,4 +1,4 @@
-export const COLOR_BY_POKE_TYPE = {
+export const COLOR_BY_POKE_TYPE: any = {
   normal: "#A8A77A",
   fire: "#EE8130",
   water: "#6390F0",
