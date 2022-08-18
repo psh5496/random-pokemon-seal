@@ -20,10 +20,16 @@ const PokemonSeal = () => {
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
         width={270}
         height={270}
+        alt="pokemon image"
       />
       <LogoContainer>
         <div>
-          <Image src={"/images/sticker_logo.png"} width={100} height={30} />
+          <Image
+            src={"/images/sticker_logo.png"}
+            width={100}
+            height={30}
+            alt="pokemon logo"
+          />
         </div>
       </LogoContainer>
     </PokemonCard>
